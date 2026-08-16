@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mock Interview Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- Main Heading -->
+        <h1>🤖 AI Mock Interview Assistant</h1>
+
+        <p class="subtitle">
+            Practice. Improve. Get Interview Ready.
+        </p>
+
+
+        <!-- ============================= -->
+        <!-- INTERVIEW FORM -->
+        <!-- ============================= -->
+
+        <form action="/start-interview" method="POST" enctype="multipart/form-data">
+
+
+            <!-- ============================= -->
+            <!-- RESUME UPLOAD -->
+            <!-- ============================= -->
+
+            <div class="card">
+
+                <h2>📄 Upload Your Resume</h2>
+
+                <p>
+                    Upload your resume and let AI create
+                    personalized interview questions.
+                </p>
+
+                <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+
+            </div>
+
+
+            <!-- ============================= -->
+            <!-- INTERVIEW TYPE -->
+            <!-- ============================= -->
+
+            <div class="card">
+
+                <h2>🎯 Interview Type</h2>
+
+                <select name="interview_type" id="interviewType">
+
+                    <option value="technical">
+                        Technical Interview
+                    </option>
+
+                    <option value="hr">
+                        HR Interview
+                    </option>
+
+                    <option value="behavioral">
+                        Behavioral Interview
+                    </option>
+
+                    <option value="coding">
+                        Coding Interview
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ============================= -->
+            <!-- DIFFICULTY -->
+            <!-- ============================= -->
+
+            <div class="card">
+
+                <h2>📊 Difficulty</h2>
+
+                <select name="difficulty" id="difficulty">
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="intermediate" selected>
+                        Intermediate
+                    </option>
+
+                    <option value="advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- ============================= -->
+            <!-- INTERVIEW MODE -->
+            <!-- ============================= -->
+
+            <div class="card">
+
+                <h2>🎤 Interview Mode</h2>
+
+                <div class="modes">
+
+                    <label>
+
+                        <input type="radio" name="mode" value="voice" checked>
+
+                        🎤 Voice Interview
+
+                    </label>
+
+
+                    <label>
+
+                        <input type="radio" name="mode" value="text">
+
+                        ⌨️ Text Interview
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- ============================= -->
+            <!-- START INTERVIEW -->
+            <!-- ============================= -->
+
+            <button type="submit" class="start-btn">
+
+                🚀 Start Interview
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
